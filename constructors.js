@@ -13,9 +13,14 @@
   The values for the make and model will come from two parameters, make and model (in that order).
 */
 
+class CarFactory {
+  constructor(make, model) {
+    this.make = make;
+    this.model = model;
+  }
+}
+
 // Code here
-
-
 
 ////////// PROBLEM 2 //////////
 
@@ -32,13 +37,27 @@ function Employee(name, email, hireDate) {
   Assign the result of the invocation to a variable called bob.
 */
 
+let bob = new Employee('Bob', 'bob@gmail.com', '01-02-98');
+
 // Code here
-
-
 
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
+class Car {
+  constructor(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.move = 0;
+  }
+
+  moveCar() {
+    this.move += 10;
+    return this.move;
+  }
+}
+
 var prius = new Car('Toyota', 'Prius', 2011);
 var mustang = new Car('Ford', 'Mustang', 2013);
 prius.moveCar(); // Increments prius' move property by 10. Returns the new move property.
@@ -54,5 +73,3 @@ mustang.moveCar(); // Increments mustang' move property by 10. Returns the new m
 */
 
 // Code here
-
-
